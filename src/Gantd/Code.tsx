@@ -2,7 +2,7 @@ export default {
   dataCell: `
 import React, { useState } from 'react'
 import {Input} from 'gantd'
-//import Input from 'data-cell-g'
+//import {Input} from 'data-cell-g'
 const Demo = () => {
   const [value, setValue] = useState('数据单元是读写分离的;请点击右侧小笔进行编辑')
   const onSave = (id, value, cb) => {
@@ -38,7 +38,8 @@ const Demo = () => {
   import React, { useState, useRef, useCallback, useEffect } from 'react'
   import { Button, notification } from 'antd'
   import { EditStatus, SwitchStatus, SchemaForm } from 'gantd'
-  
+  //import SchemaForm from 'schema-form-g'
+  //import {EditStatus, SwitchStatus} from 'data-cell-g'
   const schema = {
       type: "object",
       title: "数据驱动表单",
@@ -171,6 +172,8 @@ const Demo = () => {
   import React, { useState, useCallback } from 'react'
   import { Button, notification, message } from 'antd'
   import { SmartTable, EditStatus, SwitchStatus } from 'gantd'
+  //import SmartTable from 'smart-table-g'
+  //import {EditStatus, SwitchStatus} from 'data-cell-g'
   import Prism from 'prismjs'
   import { format } from './utils'
   import _ from 'lodash'

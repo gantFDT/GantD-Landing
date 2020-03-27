@@ -8,7 +8,11 @@ const schema = {
     type: "object",
     title: "数据驱动表单",
     required: ["key_1"],
-    propertyType: {
+    propertyType: {key_5: {
+        title: "手机号",
+        type: "string",
+        componentType: "InputEmail"
+    },
         key_1: {
             title: "文本",
             type: "string",
@@ -27,7 +31,8 @@ const schema = {
             title: "手机号",
             type: "string",
             componentType: "InputCellPhone"
-        },
+        }
+        
     }
 }
 

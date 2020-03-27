@@ -69,12 +69,15 @@ export default function Footer(props: any) {
           Made By <a href="https://github.com/gantFDT" target="_blank" style={{ display: 'inline-block', color: '#fff' }}>😜 Gant FDT</a> |  Sponsor by<a href="https://www.gantsoftware.com/" target="_blank" style={{ display: 'inline-block', color: '#fff' }}><img src={GantImg} style={{ width: 40, display: 'inline-block' }} />
             <p style={{ fontWeight: 'bold', display: 'inline-block' }}>GantSoftware</p>
           </a>
-          </div>
-        {/* <div style={{ borderTop: '1px solid rgba(128,128,128,0.3)', padding: 10, textAlign: 'center' }}>
-          Sponsor <a href="https://www.gantsoftware.com/" target="_blank" style={{ display: 'inline-block', color: '#fff' }}><img src={GantImg} style={{ width: 40, display: 'inline-block' }} />
-            <p style={{ fontWeight: 'bold', display: 'inline-block' }}>GantSoftware</p>
+        </div>
+        <div style={{ borderTop: '1px solid rgba(128,128,128,0.3)', padding: 10, textAlign: 'center' }}>
+          <p style={{ fontWeight: 'bold', display: 'inline-block' }}>甘棠软件系统（上海）有限公司的版权所有</p>
+          <p style={{ fontWeight: 'bold', display: 'inline-block',margin:'0 10px' }}> | </p>
+          <a href="http://www.beian.miit.gov.cn" target="_blank" style={{ display: 'inline-block', color: '#fff' }}>
+            <p style={{ fontWeight: 'bold', display: 'inline-block' }}>http://www.beian.miit.gov.cn</p>
           </a>
-        </div> */}
+
+        </div>
       </footer>
     </>
   );
@@ -112,18 +115,18 @@ let numberAdd: add<number> = (a: number, b: number): number => {
 }
 
 
-interface HasLength{
+interface HasLength {
   length: number
 }
 
-function returnIt2<T extends HasLength>(arg: T): T{
+function returnIt2<T extends HasLength>(arg: T): T {
   console.log(arg.length) // no error
   return arg;
 }
 // 类的泛型约束
-function create<T>(c: {new():T}) {
-return new c();
+function create<T>(c: { new(): T }) {
+  return new c();
 }
-class Human{}
+class Human { }
 
-let  jack = create<Human>(Human)
+let jack = create<Human>(Human)
