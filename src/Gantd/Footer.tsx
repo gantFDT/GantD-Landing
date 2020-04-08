@@ -72,8 +72,10 @@ export default function Footer(props: any) {
         </div>
         <div style={{ borderTop: '1px solid rgba(128,128,128,0.3)', padding: 10, textAlign: 'center' }}>
           <p style={{ fontWeight: 'bold', display: 'inline-block' }}>甘棠软件系统（上海）有限公司的版权所有</p>
-          <p style={{ fontWeight: 'bold', display: 'inline-block',margin:'0 10px' }}> | </p>
+          <p style={{ fontWeight: 'bold', display: 'inline-block', margin: '0 10px' }}> | </p>
           <a href="http://www.beian.miit.gov.cn" target="_blank" style={{ display: 'inline-block', color: '#fff' }}>
+            <p style={{ fontWeight: 'bold', display: 'inline-block' }}>沪ICP备15000245号-3</p>
+            <p style={{ fontWeight: 'bold', display: 'inline-block', margin: '0 10px' }}> | </p>
             <p style={{ fontWeight: 'bold', display: 'inline-block' }}>http://www.beian.miit.gov.cn</p>
           </a>
 
