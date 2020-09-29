@@ -1,18 +1,18 @@
-import React, { useState, useRef, useCallback, useEffect } from 'react'
+import React, { useState, useRef, useCallback, useEffect, useMemo } from 'react'
 import { Button, notification } from 'antd'
-import { EditStatus, SwitchStatus, SchemaForm } from 'gantd'
+import { EditStatus, SwitchStatus, SchemaForm, Header } from 'gantd'
 import Prism from 'prismjs'
-import {format} from './utils'
+import { format } from './utils'
 
 const schema = {
     type: "object",
-    title: "数据驱动表单",
     required: ["key_1"],
-    propertyType: {key_5: {
-        title: "手机号",
-        type: "string",
-        componentType: "InputEmail"
-    },
+    propertyType: {
+        key_5: {
+            title: "手机号",
+            type: "string",
+            componentType: "InputEmail"
+        },
         key_1: {
             title: "文本",
             type: "string",
@@ -32,7 +32,7 @@ const schema = {
             type: "string",
             componentType: "InputCellPhone"
         }
-        
+
     }
 }
 
@@ -42,7 +42,7 @@ const uiSchema = {
     "field:labelCol": 4,
     "field:wrapperCol": 20,
     "field:labelAlign": "left",
-    "form:style": {padding:10,background:'transparent'},
+    "form:style": { padding: 10, background: 'transparent' },
 }
 
 export default function BasicUse() {
@@ -82,8 +82,8 @@ export default function BasicUse() {
         setEdit(SwitchStatus)
     }, [])
 
-    const titleConfig = {
-        "title:extra": (<>
+    const titleConfig = useMemo(() => {
+        return <>
             {edit === EditStatus.EDIT && <Button onClick={useSwitch} className='gant-margin-5' size="small">退出编辑</Button>}
             {edit !== EditStatus.EDIT && <Button onClick={useSwitch} className='gant-margin-5' size="small">进入编辑</Button>}
             {edit === EditStatus.EDIT && < Button
@@ -96,8 +96,9 @@ export default function BasicUse() {
             >
                 保存
             </Button>}
-        </>)
-    }
+        </>
+    }, [edit])
+
 
     const onSave = useCallback((id, value, cb) => {
         setData({ ...data, [id]: value })
@@ -105,6 +106,7 @@ export default function BasicUse() {
     }, [data])
 
     return <>
+        <Header title="数据驱动表单" extra={titleConfig} />
         <SchemaForm
             wrappedComponentRef={formRef}
             onSave={onSave}
@@ -112,7 +114,6 @@ export default function BasicUse() {
             data={data}
             schema={schema}
             uiSchema={uiSchema}
-            titleConfig={titleConfig}
         />
     </>
 }

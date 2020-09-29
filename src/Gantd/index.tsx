@@ -243,11 +243,11 @@ const Page = (props: any) => {
         imageAlign='left'
         id="table"
         content={<>
-          <div className={classnames('title')} style={{ fontSize: 36 }}>智能表格 SmartTable</div>
+          <div className={classnames('title')} style={{ fontSize: 36 }}>单元格编辑表格 Grid</div>
           <div className="content">
-            对于数据密集型管理系统，尽可能少的空间展示尽可能多的内容和操作一直是很多用户的诉求，对于表格，我们往这个方向做了些优化，特性有多视图自定义，单元格编辑强化，虚拟滚动等
+            我们最终采用ag-grid做了封装增强，结合了数据单元实现单元格级别的数据维护功能
           </div>
-          <Button size="large" type="primary" className="gant-margin-v-20" href="http://docs.gant.design/?path=/story/%E7%BB%84%E4%BB%B6-%E5%88%97%E8%A1%A8--smarttable-%E6%99%BA%E8%83%BD%E8%A1%A8%E6%A0%BC-%F0%9F%93%A6" target="_blank">查看示例</Button>
+          <Button size="large" type="primary" className="gant-margin-v-20" href="http://docs.gant.design/?path=/story/%E7%BB%84%E4%BB%B6-%E5%88%97%E8%A1%A8--grid-%E8%A1%A8%E6%A0%BC-%F0%9F%93%A6" target="_blank">查看示例</Button>
           <Button size="large" className={classnames('gant-margin-v-20', 'gant-margin-h-20')} href="https://github.com/gantFDT/gant-design" target="_blank"><Icon type="github" /> github</Button>
         </>}
       />
@@ -263,8 +263,8 @@ const Page = (props: any) => {
           content: '基于数据单元实现表单的读写分离单元格编辑'
         }, {
           img: viewImg,
-          title: '多视图',
-          content: '快速配置、切换多种不同视图展现'
+          title: '撤销重做',
+          content: '内置immutable数据实现撤销重做功能'
         }, {
           img: tableImg,
           title: '虚拟滚动',
@@ -272,7 +272,15 @@ const Page = (props: any) => {
         }]}
         extra={
           <div className="full-width" style={{ maxWidth: 1000, marginTop: 50 }}>
-            <Row>
+
+            <Button
+              size="large"
+              type="primary"
+              href="http://docs.gant.design/?path=/story/%E7%BB%84%E4%BB%B6-%E5%88%97%E8%A1%A8--grid-%E8%A1%A8%E6%A0%BC-%F0%9F%93%A6"
+              target="_blank"
+              style={{ width: '100%', height: 200, fontSize: 24, lineHeight: '200px' }}
+            >查看Grid示例</Button>
+            {/* <Row>
               <Col {...span}>
                 <div className="demo-box">
                   <SmartTableDemo />
@@ -285,7 +293,7 @@ const Page = (props: any) => {
                   </code>
                 </pre>
               </Col>
-            </Row>
+            </Row> */}
           </div>
         }
       />
