@@ -55,9 +55,9 @@ export default function Footer(props: any) {
                 <div className="link">
                   <a href="https://ant.design" target="_blank">AntD</a>
                 </div>
-                <div className="link">
+                {/* <div className="link">
                   <a href="http://favori.gitee.io/lite-ui-framework-landing/" target="_blank">Lite UI Framework</a>
-                </div>
+                </div> */}
               </Col>
             </QueueAnim>
             {/* </ScrollOverPack> */}
@@ -65,11 +65,13 @@ export default function Footer(props: any) {
 
         </div >
         <div style={{ borderTop: '1px solid rgba(128,128,128,0.3)', marginTop: 30, padding: 10, textAlign: 'center' }}>
-          Made By <a href="https://github.com/gantFDT" target="_blank" style={{ display: 'inline-block', color: '#fff' }}>😜 Gant FDT</a> |  Sponsor by<a href="https://www.gantsoftware.com/" target="_blank" style={{ display: 'inline-block', color: '#fff' }}><img src={GantImg} style={{ width: 40, display: 'inline-block' }} />
+          Made By <a href="https://github.com/gantFDT" target="_blank" style={{ display: 'inline-block', color: '#fff' }}> Gant FDT</a> 
+          
+          {/* |  Sponsor by<a href="https://www.gantsoftware.com/" target="_blank" style={{ display: 'inline-block', color: '#fff' }}><img src={GantImg} style={{ width: 40, display: 'inline-block' }} />
             <p style={{ fontWeight: 'bold', display: 'inline-block' }}>GantSoftware</p>
-          </a>
+          </a> */}
         </div>
-        <div style={{ borderTop: '1px solid rgba(128,128,128,0.3)', padding: 10, textAlign: 'center' }}>
+        {/* <div style={{ borderTop: '1px solid rgba(128,128,128,0.3)', padding: 10, textAlign: 'center' }}>
           <p style={{ fontWeight: 'bold', display: 'inline-block' }}>甘棠软件系统（上海）有限公司的版权所有</p>
           <p style={{ fontWeight: 'bold', display: 'inline-block', margin: '0 10px' }}> | </p>
           <a href="http://beian.miit.gov.cn" target="_blank" style={{ display: 'inline-block', color: '#fff' }}>
@@ -78,7 +80,7 @@ export default function Footer(props: any) {
             <p style={{ fontWeight: 'bold', display: 'inline-block' }}>beian.miit.gov.cn</p>
           </a>
 
-        </div>
+        </div> */}
       </footer>
     </>
   );
